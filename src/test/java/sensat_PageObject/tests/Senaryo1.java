@@ -8,9 +8,11 @@ import sensat_PageObject.utilites.BaseTest;
 import sensat_PageObject.utilites.ConfigReader;
 
 public class Senaryo1 extends BaseTest {
+
     @Test
     public void HesapBilgileriDogrulama() {
-        HomePage homePage = new HomePage(driver);
+
+        HomePage homePage= new HomePage(driver);
         LoginPage loginPage = new LoginPage(driver);
         PanelimPage panelimPage = new PanelimPage(driver);
         UyelikIslemlerimPage uyelikIslemlerimPage = new UyelikIslemlerimPage(driver);

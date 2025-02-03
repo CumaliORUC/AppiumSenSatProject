@@ -2,6 +2,7 @@ package sensat_PageObject.utilites;
 
 import com.google.common.collect.ImmutableMap;
 import io.appium.java_client.AppiumBy;
+import io.appium.java_client.MobileBy;
 import io.appium.java_client.android.Activity;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -14,6 +15,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.UUID;
 
 public class ReuseableMethods {
     AndroidDriver driver;
@@ -50,4 +52,11 @@ public class ReuseableMethods {
         waitForVisibilityOfElement(sekme);
         sekme.click();
     }
+
+    public void scrollToBottomWithUiScrollable(AndroidDriver driver) {
+        driver.findElement(MobileBy.AndroidUIAutomator(
+                "new UiScrollable(new UiSelector().scrollable(true)).setAsVerticalList().flingToEnd(5)"
+        ));
+    }
+
 }
