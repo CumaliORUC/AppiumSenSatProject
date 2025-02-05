@@ -38,6 +38,7 @@ public class BaseTest {
         options.setCapability("autoGrantPermissions", true);
         options.setCapability("appPackage", "tr.com.dteknoloji.sensat"); // Buraya uygulamanın package adını yazın
         options.setCapability("appActivity", "tr.com.dteknoloji.sensat.MainActivity");
+        //options.setChromedriverExecutable("/Users//cumalioruc//Desktop//selenium");
         options.setCapability(MobileCapabilityType.NO_RESET, true);
         options.setCapability("autoAcceptAlert",true);
         driver=new AndroidDriver(new URI("http://127.0.0.1:4723").toURL(),options); //JAVA 20 den sonra new URL() =>new URI() oldu. URL'e parse ettik.

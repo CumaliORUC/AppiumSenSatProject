@@ -36,11 +36,22 @@ public class Senaryo3 extends BaseTest {
         sonuclarListesiPage.favorilereIlanEkle();
         sonuclarListesiPage.ilanSayfasınaGit();
         homePage.favorilerimButton.click();
-        favorilerimPage.FavoriListesiDolu();
-        //favorilerimPage.secButton.click();
-        favorilerimPage.tumFavorileriSil();
-        favorilerimPage.ilanYokText.isDisplayed();
+        favorilerimPage.FavoriListesiDoluMu();
+        //favorilerimPage.tumFavorileriSil(); Burada Silme İşlemi Favoriler sayfası içerisinde yapılır
+        favorilerimPage.favorileriSil();
+        Assert.assertTrue(favorilerimPage.ilanYokText.isDisplayed(), "Favorilerim sayfasında ilan bulunamadı");
 
+    }
+    @Test (enabled = false)
+    public void favoileriSilme(){
+        HomePage homePage = new HomePage(driver);
+        FavorilerimPage favorilerimPage = new FavorilerimPage(driver);
+
+        homePage.setActivity();
+        homePage.favorilerimButton.click();
+        favorilerimPage.FavoriListesiDoluMu();
+        favorilerimPage.favorileriSil();
+        Assert.assertTrue(favorilerimPage.ilanYokText.isDisplayed(), "Favorilerim sayfasında ilan bulunamadı");
     }
 
 }

@@ -33,7 +33,7 @@ public class SonuclarListesiPage extends ReuseableMethods{
     public WebElement sayfadakiSonIlan;
 
     public void favorilereIlanEkle() {
-        int hedefIlanSayisi = 10; // Toplam tıklanacak ilan sayısı
+        int hedefIlanSayisi = 5; // Toplam tıklanacak ilan sayısı
         int tiklananIlanSayisi = 0;
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
@@ -81,9 +81,7 @@ public class SonuclarListesiPage extends ReuseableMethods{
         //Thread.sleep(5000);
         //driver.navigate().back();
         //driver.navigate().back();
-
         //((JavascriptExecutor) driver).executeScript("mobile: performEditorAction", ImmutableMap.of("action", "goBack"));
-
        //System.out.println("Back button tıklandı");
         //((JavascriptExecutor) driver).executeScript("mobile: performEditorAction", ImmutableMap.of("action", "goBack"));
         //driver.pressKey(new KeyEvent(AndroidKey.BACK));

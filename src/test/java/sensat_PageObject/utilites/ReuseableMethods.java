@@ -19,13 +19,18 @@ import java.util.UUID;
 
 public class ReuseableMethods {
     AndroidDriver driver;
+    Activity activity;
     public ReuseableMethods(AndroidDriver driver) {
         this.driver = driver;
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
     public void setActivity() {
-        Activity activity = new Activity("tr.com.dteknoloji.sensat", "tr.com.dteknoloji.sensat.MainActivity");
+         activity = new Activity("tr.com.dteknoloji.sensat", "tr.com.dteknoloji.sensat.MainActivity");
+    }
+
+    public void setActivityChrome() {
+        activity = new Activity("com.android.chrome", "org.chromium.chrome.browser.ChromeTabbedActivity");
     }
 
     public void waitForVisibilityOfElement(WebElement locator) {
@@ -58,5 +63,4 @@ public class ReuseableMethods {
                 "new UiScrollable(new UiSelector().scrollable(true)).setAsVerticalList().flingToEnd(5)"
         ));
     }
-
 }

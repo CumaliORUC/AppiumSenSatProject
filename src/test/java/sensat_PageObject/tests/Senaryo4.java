@@ -47,4 +47,13 @@ public class Senaryo4 extends BaseTest {
         Assert.assertTrue(telefonDogrulamaPage.telefonDogrulamaPagePageTitle.isDisplayed());
     }
 
+    @Test
+    public void mailDogrulama(){
+        MailPage mailPage=new MailPage(driver);
+        driver.activateApp("com.google.android.gm/.ui.MailActivityGmail");
+
+        mailPage.senSatMail.click();
+        mailPage.uyelikOnaylaButonu.click();
+    }
+
 }
